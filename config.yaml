@@ -141,7 +141,7 @@ window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
   # the WM as admin.
   - command: "ignore"
-    match_process_name: "/Taskmgr|ScreenClippingHost/"
+    match_process_name: "/Taskmgr|ScreenClippingHost|Terminal|Windows Terminal/"
 
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   - command: "set floating"
@@ -162,13 +162,13 @@ binding_modes:
     keybindings:
       # Resize focused window by a percentage or pixel amount.
       - command: "resize width -2%"
-        bindings: ["N", "Left"]
+        bindings: ["N", "Left", "A"]
       - command: "resize width +2%"
-        bindings: ["I", "Right"]
+        bindings: ["I", "Right", "S"]
       - command: "resize height +2%"
-        bindings: ["U", "Up"]
+        bindings: ["U", "Up", "W"]
       - command: "resize height -2%"
-        bindings: ["E", "Down"]
+        bindings: ["E", "Down", "R"]
       # Press enter/escape to return to default keybindings.
       - command: "binding mode none"
         bindings: ["Escape", "Enter"]
