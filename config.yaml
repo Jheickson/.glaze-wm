@@ -227,7 +227,7 @@ keybindings:
 
   # Minimize focused window.
   - command: "set minimized"
-    binding: "Alt+M"
+    binding: "Alt+C"
 
   # Close focused window.
   - command: "close"
