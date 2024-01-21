@@ -1,0 +1,2 @@
+# .glaze-wm
+ GlazeWM Config
