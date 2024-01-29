@@ -1,6 +1,6 @@
 general:
   # Whether to automatically focus windows underneath the cursor.
-  focus_follows_cursor: false
+  focus_follows_cursor: true
 
   # Whether to jump the cursor between windows focused by the WM.
   cursor_follows_focus: false
@@ -16,7 +16,7 @@ general:
   floating_window_move_amount: "5%"
 
   # Whether to center new floating windows.
-  center_new_floating_windows: false
+  center_new_floating_windows: true
 
   # *Strongly* recommended to set to 'false'. Whether to globally enable/disable
   # window transition animations (on minimize, close, etc). Set to 'unchanged'
@@ -25,17 +25,17 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "10px"
+  inner_gap: "5px"
 
   # Gap between windows and the screen edge.
-  outer_gap: "10px"
+  outer_gap: "5px"
 
 # Highlight active/inactive windows with a colored border.
 # ** Exclusive to Windows 11 due to API limitations.
 focus_borders:
   active:
     enabled: true
-    color: "#77362c"
+    color: "#d67765"
 
   inactive:
     enabled: false
@@ -45,14 +45,14 @@ bar:
   height: "30px"
   position: "top"
   opacity: 1.0
-  background: "#20242cc4"
-  foreground: "#ffffff"
+  background: "#404142"
+  foreground: "#d67765"
   font_family: "Segoe UI"
   font_size: "13px"
   padding: "4px 6px"
-  offset_x: "0"
-  offset_y: "0"
-  border_radius: "0"
+  offset_x: "5"
+  offset_y: "5"
+  border_radius: "10"
   components_left:
     - type: "workspaces"
       focused_workspace_background: "#ffffff33"
