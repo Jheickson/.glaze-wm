@@ -3,7 +3,7 @@ general:
   focus_follows_cursor: true
 
   # Whether to jump the cursor between windows focused by the WM.
-  cursor_follows_focus: false
+  cursor_follows_focus: true
 
   # Whether to switch back and forth between the previously focused workspace
   # when focusing the current workspace.
@@ -35,18 +35,18 @@ gaps:
 focus_borders:
   active:
     enabled: true
-    color: "#d67765"
+    color: "#cccccc"
 
   inactive:
     enabled: false
-    color: "#ff0000"
+    color: "#abbcda"
 
 bar:
   height: "30px"
   position: "top"
   opacity: 1.0
-  background: "#404142"
-  foreground: "#d67765"
+  background: "#000000"
+  foreground: "#cccccc"
   font_family: "Segoe UI"
   font_size: "13px"
   padding: "5px 5px"
@@ -67,51 +67,58 @@ bar:
       label_playing: "{song_title} - {artist_name} ▶️"
       max_title_length: 30
       max_artist_length: 20
-  components_right:
-    # - type: "system tray"
-    - type: "tiling direction"
-      label_horizontal: "⮂"
-      label_vertical: "⮁"
-      background: "#ffffff00"
-      margin: "0 4px"
       padding: "0 8px"
-    - type: "battery"
-      label_charging: "{battery_level}% 🔌 "
-      label_draining: "{battery_level}% 🔋 "
-      label_power_saver: "{battery_level}% 🪫"
+  components_right:
+    - type: "system tray"
+      padding: "4px"
+    # - type: "tiling direction"
+    #   label_horizontal: "⮂"
+    #   label_vertical: "⮁"
+    #   background: "#ffffff00"
+    #   margin: "0 4px"
+    #   padding: "0 8px"
+    # - type: "battery"
+    #   label_charging: "{battery_level}% 🔌 "
+    #   label_draining: "{battery_level}% 🔋 "
+    #   label_power_saver: "{battery_level}% 🪫"
     - type: "binding mode"
       background: "#ffffff33"
-      margin: "0 4px 0 0"
-      padding: "0 8px"
+      # margin: "0 4px 0 0"
+      # padding: "0 8px"
     - type: "cpu"
       label: "CPU: {percent_usage}% "
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
+      padding: "4px"
     # - type: "gpu"
     #   label: "GPU: {percent_usage}% "
     #   # How often this counter is refreshed.
     #   refresh_interval_ms: 1000
+    #   padding: "4px"
     - type: "memory"
       label: "RAM: {percent_usage}% "
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
+      padding: "4px"
     - type: "volume"
       label_low: "🔊{volume_level}%"
       label_medium: "🔊{volume_level}%"
       label_high: "🔊{volume_level}%"
       label_mute: "🔊{volume_level}%"
-    # - type: "network"
-    #   label_no_internet: "NC"
-    #   label_ethernet: "Eth"
-    #   label_wifi_strength_0: "WiFi: 0%"
-    #   label_wifi_strength_25: "WiFi: 25%"
-    #   label_wifi_strength_50: "WiFi: 50%"
-    #   label_wifi_strength_75: "WiFi: 75%"
-    #   label_wifi_strength_100: "WiFi: 100%"
-    # - type: "clock"
-    #   # Documentation on formatting date/time string:
-    #   # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
-    #   time_formatting: "hh:mm tt  ddd MMM d"
+      padding: "4px"
+    - type: "network"
+      label_no_internet: "NC"
+      label_ethernet: "Eth"
+      label_wifi_strength_0: "WiFi: 0%"
+      label_wifi_strength_25: "WiFi: 25%"
+      label_wifi_strength_50: "WiFi: 50%"
+      label_wifi_strength_75: "WiFi: 75%"
+      label_wifi_strength_100: "WiFi: 100%"
+    - type: "clock"
+      # Documentation on formatting date/time string:
+      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+      time_formatting: "hh:mm tt  ddd MMM d"
+      padding: "4px"
     - type: "weather"
       latitude: -2.428361
       longitude: -54.723115
@@ -126,6 +133,7 @@ bar:
       label_snow_flake: "❄️ {temperature_celsius}°C"
       label_thunderstorm: "⚡ {temperature_celsius}°C"
       label_cloud: "☁️ {temperature_celsius}°C"
+      padding: "4px"
 
 workspaces:
   - name: "1"
