@@ -114,10 +114,6 @@ bar:
       label_wifi_strength_50: "WiFi: 50%"
       label_wifi_strength_75: "WiFi: 75%"
       label_wifi_strength_100: "WiFi: 100%"
-    - type: "clock"
-      # Documentation on formatting date/time string:
-      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
-      time_formatting: "hh:mm tt  ddd MMM d"
       padding: "4px"
     - type: "weather"
       latitude: -2.428361
@@ -133,6 +129,11 @@ bar:
       label_snow_flake: "❄️ {temperature_celsius}°C"
       label_thunderstorm: "⚡ {temperature_celsius}°C"
       label_cloud: "☁️ {temperature_celsius}°C"
+      padding: "4px"
+    - type: "clock"
+      # Documentation on formatting date/time string:
+      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+      time_formatting: "hh:mm tt  ddd MMM d"
       padding: "4px"
 
 workspaces:
