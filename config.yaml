@@ -1,6 +1,6 @@
 general:
   # Whether to automatically focus windows underneath the cursor.
-  focus_follows_cursor: true
+  focus_follows_cursor: false
 
   # Whether to jump the cursor between windows focused by the WM.
   cursor_follows_focus: true
@@ -10,13 +10,13 @@ general:
   toggle_workspace_on_refocus: true
 
   # Whether to show floating windows as always on top.
-  show_floating_on_top: true
+  show_floating_on_top: false
 
   # Amount to move floating windows by (eg. when using `alt+<hjkl>` on a floating window)
   floating_window_move_amount: "5%"
 
   # Whether to center new floating windows.
-  center_new_floating_windows: true
+  center_new_floating_windows: false
 
   # *Strongly* recommended to set to 'false'. Whether to globally enable/disable
   # window transition animations (on minimize, close, etc). Set to 'unchanged'
@@ -25,28 +25,28 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "5px"
+  inner_gap: "10px"
 
   # Gap between windows and the screen edge.
-  outer_gap: "5px"
+  outer_gap: "10px"
 
 # Highlight active/inactive windows with a colored border.
 # ** Exclusive to Windows 11 due to API limitations.
 focus_borders:
   active:
     enabled: true
-    color: "#cccccc"
+    color: "#333399"
 
   inactive:
-    enabled: false
-    color: "#abbcda"
+    enabled: true
+    color: "#424153"
 
 bar:
   height: "30px"
   position: "top"
   opacity: 1.0
   background: "#000000"
-  foreground: "#cccccc"
+  foreground: "#333399"
   font_family: "Segoe UI"
   font_size: "13px"
   padding: "5px 5px"
@@ -65,8 +65,8 @@ bar:
       label_not_playing: ""
       label_paused: "{song_title} - {artist_name} ⏸️"
       label_playing: "{song_title} - {artist_name} ▶️"
-      max_title_length: 30
-      max_artist_length: 20
+      max_title_length: 70
+      max_artist_length: 40
       padding: "0 8px"
   components_right:
     - type: "system tray"
